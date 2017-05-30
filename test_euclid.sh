@@ -39,7 +39,7 @@ diff $tmp-errmes1 $tmp-err4 && echo "TEST4 OK"
 diff $tmp-num $tmp-nummes || ERROR_EXIT "TEST5-2"
 diff $tmp-num $tmp-nummes && echo "TEST5 OK"
 
-echo "ALL TEST OK"
+echo "ALL TEST FINISH"
 rm -f $tmp-*
 exit 0
 
