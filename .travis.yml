@@ -1,3 +1,4 @@
 nguage: bash
 script:
  - bash ./test_same.sh
+ - bash ./test_same2.sh
