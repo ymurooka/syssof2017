@@ -27,8 +27,12 @@ diff $tmp-errmes2 $tmp-err2 || ERROR_EXIT "TEST2-2"
 diff $tmp-errmes3 $tmp-err3 || ERROR_EXIT "TEST3-2"
 
 #TEST4
-./euclid.sh 20 10 > $tmp-num || ERROR_EXIT "TEST4-1"
-diff $tmp-num $tmp-nummes || ERROR_EXIT "TEST4-2"
+./euclid.sh 20 10 100 > $tmp-err4 && ERROR_EXIT "TEST5-1"
+diff $tmp-errmes1 $tmp-err4 || ERROR_EXIT "TEST5-2"
+
+#TEST5
+./euclid.sh 20 10 > $tmp-num || ERROR_EXIT "TEST5-1"
+diff $tmp-num $tmp-nummes || ERROR_EXIT "TEST5-2"
 
 echo OK
 rm -f $tmp-*
