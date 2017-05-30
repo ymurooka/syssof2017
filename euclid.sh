@@ -16,7 +16,7 @@ fi
 
 Arg2=`echo -n $2 | sed 's/[0-9]//g'`
 if [ -n "$Arg2" ]; then
-	echo "The second argument is not a natural number"
+	echo "The second argument is not a natural number."
 	exit 3
 fi
 
