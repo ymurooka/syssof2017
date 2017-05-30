@@ -8,10 +8,11 @@ ERROR_EXIT(){
  exit 1
 }
 
-#define err message
+#define message
 echo "The number of arguments is not two." > $tmp-errmes1
 echo "The first argument is not a natural number." > $tmp-errmes2
 echo "The second argument is not a natural number." > $tmp-errmes3
+echo "10" > $tmp-nummes
 
 #TEST1
 ./euclid.sh 20 > $tmp-err1 && ERROR_EXIT "TEST1-1"
@@ -27,7 +28,7 @@ diff $tmp-errmes3 $tmp-err3 || ERROR_EXIT "TEST3-2"
 
 #TEST4
 ./euclid.sh 20 10 > $tmp-num || ERROR_EXIT "TEST4-1"
-diff $tmp-num 10 || ERROR_EXIT "TEST4-2"
+diff $tmp-num $tmp-nummes || ERROR_EXIT "TEST4-2"
 
 echo OK
 rm -f $tmp-*
